@@ -1,0 +1,7 @@
+include ':appsdeps'
+include ':di'
+include ':phone'
+include ':domain'
+include ':data'
+include ':app'
+rootProject.name = "GithubBrowser"
