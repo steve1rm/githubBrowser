@@ -3,8 +3,11 @@ package me.androidbox.phone.di
 import dagger.Component
 import me.androidbox.appsdeps.ApplicationDependencies
 import me.androidbox.appsdeps.applicationDependencies
+import me.androidbox.di.component.getComponent
+import me.androidbox.di.scope.ScreenScope
 import me.androidbox.phone.screens.HomeFragment
 
+@ScreenScope
 @Component(
     dependencies = [ApplicationDependencies::class],
     modules = [HomeModule::class])
@@ -19,7 +22,8 @@ interface HomeComponent {
 }
 
 fun HomeFragment.inject() {
-    DaggerHomeComponent.factory()
-        .create(requireContext().applicationDependencies())
-        .inject(this)
+
+    getComponent {
+        DaggerHomeComponent.factory().create(requireContext().applicationDependencies())
+    }.inject(this)
 }

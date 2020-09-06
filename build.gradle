@@ -28,14 +28,20 @@ ext.versions = [
         "dagger"       : "2.26",
         "recyclerview" : "1.1.0",
         "truth"        : "1.0.1",
-        "lifecycle"    : "2.2.0"
+        "lifecycle"    : "2.2.0",
+        "coreTesting"  : "2.1.0",
+        "fragmentktx"  : "1.2.5"
 ]
 
 ext.deps = [
         "androidx" : [
+                "coreTesting"  : "androidx.arch.core:core-testing:${versions.coreTesting}",
                 "recyclerview" : "androidx.recyclerview:recyclerview:${versions.recyclerview}",
                 "livedata"     : "androidx.lifecycle:lifecycle-livedata-ktx:${versions.lifecycle}",
-                "viewmodel"    : "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}"
+                "viewmodel"    : "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}",
+                "fragmentktx"  : "androidx.fragment:fragment-ktx:${versions.fragmentktx}"
+
+
         ],
         "dagger"   : [
                 "compiler" : "com.google.dagger:dagger-compiler:${versions.dagger}",

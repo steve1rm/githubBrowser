@@ -7,12 +7,12 @@ import javax.inject.Inject
 import javax.inject.Provider
 
 class AppViewModelFactory @Inject constructor(
-    private val classToViewModel: @JvmSuppressWildcards Map<Class<out ViewModel>, Provider<ViewModel>>
+    private val classToViewModel: @JvmSuppressWildcards Map<Class<out ViewModel>, ViewModel>
 ): ViewModelProvider.Factory {
 
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         @Suppress("unchecked_cast")
-        return classToViewModel[modelClass]?.get() as? T
+        return classToViewModel[modelClass] as? T
             ?: throw IllegalStateException("No View model mapping for class: ${modelClass.name}")
     }
 }
