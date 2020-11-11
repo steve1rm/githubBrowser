@@ -7,22 +7,22 @@ import me.androidbox.data.model.UserApiModel
 import org.junit.Before
 import org.junit.Test
 
-class AppRepositoryTest {
+class AppRepositoryImpTest {
 
-    lateinit var appRepository: AppRepository
+    lateinit var appRepositoryImp: AppRepositoryImp
 
     lateinit var fakeGithubApi: FakeGithubApi
 
     @Before
     fun setUp() {
         fakeGithubApi = FakeGithubApi()
-        appRepository = AppRepository(fakeGithubApi)
+        appRepositoryImp = AppRepositoryImp(fakeGithubApi)
     }
 
     @Test
     fun `should return top repositories`() {
         // Arrange
-        val topRepository = appRepository.getTopRepos()
+        val topRepository = appRepositoryImp.getTopRepos()
 
         // Act & Assert
         assertThat(topRepository.size).isEqualTo(1)

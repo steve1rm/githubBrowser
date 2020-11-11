@@ -1,10 +1,10 @@
 package me.androidbox.appsdeps
 
 import android.content.Context
-import me.androidbox.domain.repository.AppRepository
+import me.androidbox.domain.repository.AppRepositoryImp
 
 interface ApplicationDependencies {
-    fun appRepository(): AppRepository
+    fun appRepository(): AppRepositoryImp
 }
 
 fun Context.applicationDependencies(): ApplicationDependencies {

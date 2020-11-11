@@ -6,7 +6,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.0.1"
+        classpath 'com.android.tools.build:gradle:4.1.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -38,8 +38,8 @@ ext.deps = [
                 "viewmodel"    : "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}"
         ],
         "dagger"   : [
-                "compiler" : "com.google.dagger:dagger-compiler:${versions.dagger}",
-                "core"     : "com.google.dagger:dagger:${versions.dagger}"
+                "core"     : "com.google.dagger:dagger:${versions.dagger}",
+                "compiler" : "com.google.dagger:dagger-compiler:${versions.dagger}"
         ],
         "truth" : "com.google.truth:truth:${versions.truth}"
 ]

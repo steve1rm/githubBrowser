@@ -5,6 +5,8 @@ import dagger.BindsInstance
 import dagger.Component
 import me.androidbox.appsdeps.ApplicationDependencies
 import me.androidbox.data.di.GithubApiModule
+import me.androidbox.domain.repository.AppRepository
+import me.androidbox.domain.repository.AppRepositoryImp
 import javax.inject.Singleton
 
 @Singleton
