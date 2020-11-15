@@ -34,7 +34,6 @@ dependencies {
 
     implementation project(":data") /* githubapi*/
 
-
     testImplementation 'junit:junit:4.13'
 
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

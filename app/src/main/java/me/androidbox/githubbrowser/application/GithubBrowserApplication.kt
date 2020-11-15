@@ -6,7 +6,7 @@ import me.androidbox.appsdeps.HasApplicationDependencies
 
 class GithubBrowserApplication : Application(), HasApplicationDependencies {
 
-    val applicationComponent by lazy {
+    private val applicationComponent by lazy {
         DaggerApplicationComponent.factory().create(this)
     }
 

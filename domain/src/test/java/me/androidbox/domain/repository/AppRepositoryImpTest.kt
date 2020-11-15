@@ -10,7 +10,6 @@ import org.junit.Test
 class AppRepositoryImpTest {
 
     lateinit var appRepositoryImp: AppRepositoryImp
-
     lateinit var fakeGithubApi: FakeGithubApi
 
     @Before
@@ -30,7 +29,7 @@ class AppRepositoryImpTest {
     }
 }
 
-class FakeGithubApi(): GithubApi {
+class FakeGithubApi : GithubApi {
     override fun getTopRepositories(): List<RepoApiModel> {
         return repoApiModel
     }
