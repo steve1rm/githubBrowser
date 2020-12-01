@@ -7,7 +7,7 @@ import me.androidbox.appsdeps.HasApplicationDependencies
 class GithubBrowserApplication : Application(), HasApplicationDependencies {
 
     private val applicationComponent by lazy {
-        DaggerApplicationComponent.factory().create(this)
+        DaggerApplicationComponent.factory().create(this,this)
     }
 
     override fun getApplicationDependencies(): ApplicationDependencies {

@@ -4,6 +4,7 @@ import dagger.Component
 import me.androidbox.appsdeps.ApplicationDependencies
 import me.androidbox.appsdeps.applicationDependencies
 import me.androidbox.phone.screens.HomeFragment
+import javax.inject.Singleton
 
 @Component(
     dependencies = [ApplicationDependencies::class],

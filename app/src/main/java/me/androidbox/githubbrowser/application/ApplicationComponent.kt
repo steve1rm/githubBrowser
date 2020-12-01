@@ -1,5 +1,6 @@
 package me.androidbox.githubbrowser.application
 
+import android.app.Application
 import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
@@ -15,6 +16,6 @@ interface ApplicationComponent : ApplicationDependencies {
 
     @Component.Factory
     interface Factory {
-        fun create(@BindsInstance context: Context): ApplicationComponent
+        fun create(@BindsInstance application: Application, @BindsInstance context: Context): ApplicationComponent
     }
 }
