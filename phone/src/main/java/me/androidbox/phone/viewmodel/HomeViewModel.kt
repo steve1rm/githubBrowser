@@ -3,12 +3,14 @@ package me.androidbox.phone.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import me.androidbox.di.scope.ScreenScope
 import me.androidbox.domain.repository.AppRepositoryImp
 import me.androidbox.phone.model.RepoItem
 import me.androidbox.phone.viewstate.HomeViewState
 import me.androidbox.phone.viewstate.HomeViewState.HomeViewStateLoading
 import javax.inject.Inject
 
+@ScreenScope
 class HomeViewModel @Inject constructor(
     private val appRepositoryImp: AppRepositoryImp
 ) : ViewModel() {

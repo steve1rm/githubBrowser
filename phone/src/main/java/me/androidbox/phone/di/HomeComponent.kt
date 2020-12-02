@@ -1,11 +1,15 @@
 package me.androidbox.phone.di
 
+import android.content.Context
 import dagger.Component
 import me.androidbox.appsdeps.ApplicationDependencies
 import me.androidbox.appsdeps.applicationDependencies
+import me.androidbox.di.component.getComponent
+import me.androidbox.di.scope.ScreenScope
 import me.androidbox.phone.screens.HomeFragment
 import javax.inject.Singleton
 
+@ScreenScope
 @Component(
     dependencies = [ApplicationDependencies::class],
     modules = [HomeModule::class])
@@ -20,7 +24,11 @@ interface HomeComponent {
 }
 
 fun HomeFragment.inject() {
-    DaggerHomeComponent.factory()
-        .create(requireContext().applicationDependencies())
-        .inject(this)
+    getComponent {
+        DaggerHomeComponent.factory().create(requireContext().applicationDependencies())
+    }
+
+    getComponent<HomeComponent> {
+        DaggerHomeComponent.factory().create(requireContext().applicationDependencies())
+    }
 }
