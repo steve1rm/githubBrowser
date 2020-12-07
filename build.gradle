@@ -1,6 +1,6 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext.kotlin_version = "1.4.0"
+    ext.kotlin_version = "1.4.20"
     repositories {
         google()
         jcenter()
@@ -22,24 +22,26 @@ allprojects {
 }
 
 ext.versions = [
-        "compileSdk"   : 30,
-        "minSdk"       : 21,
-        "target"       : 30,
-        "dagger"       : "2.26",
-        "recyclerview" : "1.1.0",
-        "truth"        : "1.0.1",
-        "lifecycle"    : "2.2.0",
+        "compileSdk"       : 30,
+        "minSdk"           : 21,
+        "target"           : 30,
+        "dagger"           : "2.26",
+        "recyclerview"     : "1.1.0",
+        "truth"            : "1.0.1",
+        "lifecycle"        : "2.2.0",
         "constraintLayout" : "2.0.4",
-        "archTesting" : "2.1.0"
+        "archTesting"      : "2.1.0",
+        "fragment"         : "1.2.4"
 ]
 
 ext.deps = [
         "androidx" : [
                 "constraintLayout" : "androidx.constraintlayout:constraintlayout:${versions.constraintLayout}",
-                "recyclerview" : "androidx.recyclerview:recyclerview:${versions.recyclerview}",
-                "livedata"     : "androidx.lifecycle:lifecycle-livedata-ktx:${versions.lifecycle}",
-                "viewmodel"    : "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}",
-                "archtesting"  : "androidx.arch.core:core-testing:${versions.archTesting}"
+                "recyclerview"     : "androidx.recyclerview:recyclerview:${versions.recyclerview}",
+                "livedata"         : "androidx.lifecycle:lifecycle-livedata-ktx:${versions.lifecycle}",
+                "viewmodel"        : "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}",
+                "archtesting"      : "androidx.arch.core:core-testing:${versions.archTesting}",
+                "fragment"         : "androidx.fragment:fragment-ktx:${versions.fragment}"
         ],
         "dagger"   : [
                 "core"     : "com.google.dagger:dagger:${versions.dagger}",

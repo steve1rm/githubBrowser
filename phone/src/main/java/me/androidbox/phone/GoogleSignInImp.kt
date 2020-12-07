@@ -45,13 +45,11 @@ class FragmentExt : BaseFragmentExt() {
     }
 }
 
-
 open class BaseFragmentExt : ViewModelStoreOwnerExt {
     override fun getViewModelStoreExt(): String {
         return "This is the string from the store"
     }
 }
-
 
 interface ViewModelStoreOwnerExt {
     fun getViewModelStoreExt(): String

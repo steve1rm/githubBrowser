@@ -18,6 +18,29 @@ class MockGithubApiFactory @Inject constructor() : GithubApi {
                 contributorsUrl = "",
                 createdDate = "1/1/2020",
                 updateDate = "1/1/2020",
-                owner = UserApiModel(id = 1L, login = "dagger")))
+                owner = UserApiModel(id = 1L, login = "dagger")),
+
+            RepoApiModel(
+                id = 1L,
+                name = "mock repo",
+                description = "Mock repo description",
+                stargazersCount = 1,
+                forksCount = 1,
+                contributorsUrl = "",
+                createdDate = "1/1/2020",
+                updateDate = "1/1/2020",
+                owner = UserApiModel(id = 1L, login = "dagger")),
+
+            RepoApiModel(
+                id = 1L,
+                name = "mock repo",
+                description = "Mock repo description",
+                stargazersCount = 1,
+                forksCount = 1,
+                contributorsUrl = "",
+                createdDate = "1/1/2020",
+                updateDate = "1/1/2020",
+                owner = UserApiModel(id = 1L, login = "dagger"))
+            )
     }
 }
