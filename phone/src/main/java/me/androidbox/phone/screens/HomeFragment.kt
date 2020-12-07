@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import me.androidbox.di.component.getComponent
 import me.androidbox.di.viewmodel.AppViewModelFactory
 import me.androidbox.phone.GoogleSignInImp
 import me.androidbox.phone.databinding.FragmentHomeBinding
@@ -29,7 +30,10 @@ class HomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        inject()
+        inject(this)
+        
+        googleSignInImp.inject()
+
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
